@@ -1,6 +1,8 @@
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display&display=swap');
 @import "bootstrap";
 
-.clear{
+
+.clear {
   clear: both;
 }
 
@@ -30,20 +32,30 @@
   padding-top: 26px;
 }
 
-.links{
+.links {
   padding-top: 26px;
 }
 
-.links a{
+.links a {
   color: black;
+  font-family: 'sinkin_sans700_bold';
   font-size: 25px;
   border-bottom: 1px solid #dfdfdf;
 }
 
-header{
+header {
   border-top: 9px solid #222222;
 }
 
-hr{
+hr {
   clear: both;
+}
+
+h1 {
+  font-family: 'sinkin_sans700_bold', serif;
+  font-size: 48px;
+}
+
+h2 {
+  font-family: "Playfair Display", serif;
 }
