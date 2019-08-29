@@ -23,9 +23,11 @@
         </div>
         <% end %>
       </div>
+      
       <div class="col-4 slogan">
         Splurting out unsolicited advice since 2019
       </div>
+      
       <div class="col-5 links">
         <%= link_to 'Contribute', new_quote_path %>
 
@@ -38,24 +40,27 @@
     <br classs="clear" />
     
     <div class="container">
-
-    <%= yield %>
-
-  </div>
-
-  <div class="footer">
-    <div class="container">
-      <div class="row">
-        <div class="col-6">
-          <%= link_to "This isn't enough, I need more", root_path, class: 'next-quote' %>
+      <% if flash[:error].present? %>
+        <div class="col-10 offset-1 alert alert-danger">
+          <%= flash[:error] %>
         </div>
-        <div class="col-6 footer-blurb">
-        Proudly built by <a href="https://christopherwatson.netlify.com/"> Christopher Watson</a><br />
-        Want to build your own Splurty Web App - <a href="https://online.bootcampspot.com">Learn how to code here </a>
-      </div>
+      <% end %>
+      <%= yield %>
+    </div>
+
+    <div class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-6">
+            <%= link_to "This isn't enough, I need more", root_path, class: 'next-quote' %>
+          </div>
+
+          <div class="col-6 footer-blurb">
+            Proudly built by <a href="https://christopherwatson.netlify.com/"> Christopher Watson</a><br />
+            Want to build your own Splurty Web App - <a href="https://online.bootcampspot.com">Learn how to code here </a>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-
   </body>
 </html>
